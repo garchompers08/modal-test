@@ -1,39 +1,10 @@
-import React, { useState, useCallback } from 'react';
-import { createRoot } from 'react-dom/client';
-import { useModal } from 'react-simple-hook-modal';
-
-import './app.css';
-
-const Modal = ({ children, onClose }) => {
-  return (
-    <div className="modal">
-      <div className="modal-content">
-        <div className="modal-header">
-          <button type="button" className="close" onClick={onClose}>
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div className="modal-body">
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-};
+// app.js
+import React from 'react';
 
 const App = () => {
-  const [Modal, open, close, isOpen] = useModal(Modal, {
-    preventScroll: true,
-    disableBackdrop: true,
-    focusTrapOptions: {
-      clickOutsideDeactivates: false,
-    },
-  });
-
   return (
-    <div>
-      <button onClick={open}>Open Modal</button>
-      {isOpen && Modal}
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <h1>Hello!</h1>
     </div>
   );
 };
