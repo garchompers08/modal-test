@@ -32,8 +32,7 @@ const App = () => {
 
   return (
     <div>
-      <p>Modal is Open? {isOpen ? 'Yes' : 'No'}</p>
-      <button onClick={open}>OPEN</button>
+      <button onClick={open}>Open Modal</button>
       {isOpen && Modal}
     </div>
   );
